@@ -1,21 +1,4 @@
 <#
-.SYNOPSIS
-    Malware Forensics Artifact Collector — Priority-Based for ML Dataset Research
-
-.DESCRIPTION
-    Forensic-first artifact collector for malware behavioral dataset construction.
-    Organized by order of volatility — most volatile artifacts collected first.
-    Focused on the 10 artifacts that actually matter for malware analysis.
-
-    Priority 1 — VOLATILE (collect immediately):
-        RAM dump, processes, network state, named pipes, loaded DLLs
-
-    Priority 2 — SEMI-VOLATILE (collect before reboot):
-        Sysmon EVTX, PowerShell EVTX, Security/System EVTX (raw), WMI repository
-
-    Priority 3 — NON-VOLATILE (stable, collect last):
-        Raw registry hives, Prefetch, MFT + USN Journal, Amcache/Shimcache
-
 .NOTES
     Author: E1b1g
     Version: 3.0.0 — Forensic-focused rewrite
